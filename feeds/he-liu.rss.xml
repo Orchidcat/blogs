@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>He Liu's Personal Website - 何柳</title><link>/</link><description></description><lastBuildDate>Tue, 19 Nov 2019 00:00:00 +0800</lastBuildDate><item><title>处理更细的信息</title><link>/blog/2019/11/make-something-good/</link><description>&lt;p&gt;something is good.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">何柳</dc:creator><pubDate>Tue, 19 Nov 2019 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:None,2019-11-19:/blog/2019/11/make-something-good/</guid><category>Oracle</category></item><item><title>python 抓包样例</title><link>/blog/2019/11/get-python-demo/</link><description>&lt;p&gt;python抓包样例&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="k"&gt;SELECT&lt;/span&gt;  &lt;span class="err"&gt;编号&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+            &lt;span class="err"&gt;部门&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+            &lt;span class="err"&gt;金额&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+            &lt;span class="err"&gt;审批结束时间&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+            &lt;span class="err"&gt;主旨&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+            &lt;span class="err"&gt;审批编号&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+            &lt;span class="n"&gt;deadline_date&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;365&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;DATEDIFF&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;审批结束时间&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;GETDATE&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;        
+    &lt;span class="k"&gt;FROM&lt;/span&gt;    &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt;    &lt;span class="err"&gt;裁决号&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="err"&gt;编号&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+                        &lt;span class="err"&gt;起案部门&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="err"&gt;部门&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+                        &lt;span class="err"&gt;金额&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+                        &lt;span class="err"&gt;审批结束时间&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+                        &lt;span class="err"&gt;主旨&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;        
+                        &lt;span class="err"&gt;编号&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="err"&gt;审批编号&lt;/span&gt;        
+              &lt;span class="k"&gt;FROM&lt;/span&gt;      &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;116&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="n"&gt;SMC_OA&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dbo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;V_V5_301&lt;/span&gt;&lt;span class="err"&gt;禀议书&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;   
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding:utf-8 -*-&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;cv2&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">何柳</dc:creator><pubDate>Mon, 18 Nov 2019 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:None,2019-11-18:/blog/2019/11/get-python-demo/</guid><category>Python</category></item><item><title>Test post</title><link>/blog/2019/01/test-post/</link><description>&lt;p&gt;this is test post;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">何柳</dc:creator><pubDate>Tue, 01 Jan 2019 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:None,2019-01-01:/blog/2019/01/test-post/</guid><category>MSSQL</category></item></channel></rss>
